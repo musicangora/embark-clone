@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Urbanist', sans-serif;
 }
 
 .App {
@@ -41,5 +42,6 @@
   color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
   font-size: 12vmin;
+  letter-spacing: 0.08em;
   border: solid 1.4vmin rgba(255, 255, 255, 0.95);
 }

@@ -5,7 +5,7 @@ const formatTime = (date) => {
   const minutes = ("0" + date.getMinutes()).slice(-2);
   const seconds = date.getSeconds();
 
-  return  hours + (seconds%2===0 ? ":" : " ")  + minutes;
+  return  hours + (seconds%2===0 ? ":" : "\u00A0")  + minutes;
 }
 
 const Clock = () => {
@@ -23,8 +23,8 @@ const Clock = () => {
   }, []);
 
   return (
-    <div>
-      <h1>{formatTime(date)}</h1>
+    <div className="clock-container">
+      <h1 className="clock-border">{formatTime(date)}</h1>
     </div>
   );
 };

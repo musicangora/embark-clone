@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+const formatTime = (date) => {
+  const hours = ("0" + date.getHours()).slice(-2);
+  const minutes = ("0" + date.getMinutes()).slice(-2);
+  const seconds = date.getSeconds();
+
+  return  hours + (seconds%2===0 ? ":" : " ")  + minutes;
+}
+
 const Clock = () => {
   const [date, setDate] = useState(new Date());
 
@@ -16,8 +24,7 @@ const Clock = () => {
 
   return (
     <div>
-      <h1>Hello, world!</h1>
-      <h2>{date.toLocaleTimeString()}</h2>
+      <h1>{formatTime(date)}</h1>
     </div>
   );
 };

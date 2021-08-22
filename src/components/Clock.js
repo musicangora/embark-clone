@@ -5,7 +5,7 @@ const formatTime = (date) => {
   const minutes = ("0" + date.getMinutes()).slice(-2);
   const seconds = date.getSeconds();
 
-  return  hours + (seconds%2===0 ? ":" : "\u00A0")  + minutes;
+  return  hours + (seconds%2===0 ? ":" : ".")  + minutes;
 }
 
 const Clock = () => {

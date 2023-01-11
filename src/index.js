@@ -4,6 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
+
+if (typeof document !== "undefined") {
+  document.addEventListener(
+    "keydown",
+    (e) => {
+      if (e.key === "Enter") {
+        toggleFullScreen();
+      }
+    },
+    false
+  );
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
